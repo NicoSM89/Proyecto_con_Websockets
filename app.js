@@ -3,7 +3,7 @@ const ProductManager = require('./ProductManager');
 // instancia de ProductManager con la ruta del archivo
 const productManager = new ProductManager('productos.json');
 
-// Ejemplo de uso:
+// Producto
 const newProductId = productManager.addProduct({
   title: 'Sony a6600',
   description: 'Cámara mirrorless',

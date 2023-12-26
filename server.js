@@ -28,6 +28,7 @@ app.get('/realtimeproducts', (req, res) => {
 });
 
 // Configuración de WebSockets
+// Configuración de WebSockets
 io.on('connection', (socket) => {
   console.log('Usuario conectado');
 
@@ -43,10 +44,12 @@ io.on('connection', (socket) => {
     io.emit('updateProducts', productManager.getProducts());
   });
 
+  // Evento de desconexión
   socket.on('disconnect', () => {
     console.log('Usuario desconectado');
   });
 });
+
 
 // Iniciar el servidor en el puerto 8080
 const PORT = process.env.PORT || 8080;
